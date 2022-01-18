@@ -66,14 +66,28 @@ string lastName = "Smith";
 string fullName = firstName + " " + lastName;
 string employeeIdentification = string.Concat(firstName, lastName);
 
+string displayName = $"Welcome! \n{firstName}\t{lastName}";
+
+Console.WriteLine(displayName);
+
+string marketingTagLine = "Baking the \"best Pies\" ever";
+
 string empId = firstName.ToLower() + " " + lastName.Trim().ToLower();
 
 int length = empId.Length;
 
-if (fullName.Contains("beth")) || fullName.Contains("Beth"))
+if (fullName.Contains("beth") || fullName.Contains("Beth"))
 {
     Console.WriteLine("It's Bethany!");
 }
 
+string subString = fullName.Substring(1, 3);
+Console.WriteLine("Characters 2 to 4 of fullname are " + subString);
+
+string nameUsingInterpolaiton = $"{firstName}-{lastName}";
+
+string greeting = $"Hello, {firstName.ToLower()}";
+
+Console.WriteLine(greeting);
 
 Console.ReadLine();
