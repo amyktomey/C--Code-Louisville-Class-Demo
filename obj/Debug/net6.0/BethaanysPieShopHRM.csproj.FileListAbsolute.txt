@@ -1,0 +1,15 @@
+C:\Users\m0mon\OneDrive\Desktop\C# Jan 2022\PieShop\BethaanysPieShopHRM\bin\Debug\net6.0\BethaanysPieShopHRM.exe
+C:\Users\m0mon\OneDrive\Desktop\C# Jan 2022\PieShop\BethaanysPieShopHRM\bin\Debug\net6.0\BethaanysPieShopHRM.deps.json
+C:\Users\m0mon\OneDrive\Desktop\C# Jan 2022\PieShop\BethaanysPieShopHRM\bin\Debug\net6.0\BethaanysPieShopHRM.runtimeconfig.json
+C:\Users\m0mon\OneDrive\Desktop\C# Jan 2022\PieShop\BethaanysPieShopHRM\bin\Debug\net6.0\BethaanysPieShopHRM.dll
+C:\Users\m0mon\OneDrive\Desktop\C# Jan 2022\PieShop\BethaanysPieShopHRM\bin\Debug\net6.0\ref\BethaanysPieShopHRM.dll
+C:\Users\m0mon\OneDrive\Desktop\C# Jan 2022\PieShop\BethaanysPieShopHRM\bin\Debug\net6.0\BethaanysPieShopHRM.pdb
+C:\Users\m0mon\OneDrive\Desktop\C# Jan 2022\PieShop\BethaanysPieShopHRM\obj\Debug\net6.0\BethaanysPieShopHRM.csproj.AssemblyReference.cache
+C:\Users\m0mon\OneDrive\Desktop\C# Jan 2022\PieShop\BethaanysPieShopHRM\obj\Debug\net6.0\BethaanysPieShopHRM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\m0mon\OneDrive\Desktop\C# Jan 2022\PieShop\BethaanysPieShopHRM\obj\Debug\net6.0\BethaanysPieShopHRM.AssemblyInfoInputs.cache
+C:\Users\m0mon\OneDrive\Desktop\C# Jan 2022\PieShop\BethaanysPieShopHRM\obj\Debug\net6.0\BethaanysPieShopHRM.AssemblyInfo.cs
+C:\Users\m0mon\OneDrive\Desktop\C# Jan 2022\PieShop\BethaanysPieShopHRM\obj\Debug\net6.0\BethaanysPieShopHRM.csproj.CoreCompileInputs.cache
+C:\Users\m0mon\OneDrive\Desktop\C# Jan 2022\PieShop\BethaanysPieShopHRM\obj\Debug\net6.0\BethaanysPieShopHRM.dll
+C:\Users\m0mon\OneDrive\Desktop\C# Jan 2022\PieShop\BethaanysPieShopHRM\obj\Debug\net6.0\ref\BethaanysPieShopHRM.dll
+C:\Users\m0mon\OneDrive\Desktop\C# Jan 2022\PieShop\BethaanysPieShopHRM\obj\Debug\net6.0\BethaanysPieShopHRM.pdb
+C:\Users\m0mon\OneDrive\Desktop\C# Jan 2022\PieShop\BethaanysPieShopHRM\obj\Debug\net6.0\BethaanysPieShopHRM.genruntimeconfig.cache
