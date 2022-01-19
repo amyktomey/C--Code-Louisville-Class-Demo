@@ -1,5 +1,20 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using System.Text;
+
+//Console.WriteLine("Enter the monthly wage: ");
+//string wage = Console.ReadLine();
+
+//int wageValue = int.Parse(wage);
+
+//int wageValue;
+//if (int.TryParse(wage, out wageValue))
+//    Console.WriteLine("Parsing success: " + wageValue);
+//else
+//    Console.WriteLine("Parsing failed");
+
+//Console.ReadLine();
+
 var monthlyWage = 1234;
 int months = 12, bonus = 1000;
 
@@ -37,9 +52,15 @@ char upperVersion = char.ToUpper(userSelection);
 bool isDigit = char.IsDigit(userSelection);
 bool isLetter = char.IsLetter(userSelection);
 
-DateTime hireDate = new DateTime(2021, 3, 2, 14, 30, 0);
+string hireDateString = "12/12/2020";
+DateTime hireDate = DateTime.Parse(hireDateString);
+Console.WriteLine("Parsed date: " + hireDate);
 
-Console.WriteLine(hireDate);
+var cultureInfo = new CultureInfo("n1-BE");// error @2:47 in module 4 Demo: Parsing strings
+string birthDateString = "28 Maart 1984";//Dutch, spoken in Belgium
+var birthDate = DateTime.Parse(birthDateString, cultureInfo);
+Console.WriteLine("Birth date: " + birthDate);
+
 
 DateTime exitDate = new DateTime(2021, 12, 31);
 
@@ -59,6 +80,7 @@ DateTime endHour = startHour.Add(workTime);
 Console.WriteLine(startHour.ToLongDateString());
 Console.WriteLine(endHour.ToShortTimeString());
 
+//Console.ReadLine();
 
 string firstName = "Bethany";
 string lastName = "Smith";
@@ -89,5 +111,33 @@ string nameUsingInterpolaiton = $"{firstName}-{lastName}";
 string greeting = $"Hello, {firstName.ToLower()}";
 
 Console.WriteLine(greeting);
+
+string name = "Bethany";
+string anotherName = name;
+
+Console.WriteLine("Name: " + name);
+Console.WriteLine("Another name: " + anotherName);
+
+string lowerCaseName = name.ToLower();
+
+string indexes = string.Empty;
+for (int i = 0; i < 2500; i++)
+{
+    indexes += i.ToString();
+}
+
+//string firstName = "Bethany";
+//string lastName = "Smith";
+
+System.Text.StringBuilder builder = new StringBuilder();
+
+
+builder.Append("Last Name: ");
+builder.AppendLine(lastName);
+builder.Append("First Name: ");
+builder.Append(firstName);
+string result = builder.ToString(); 
+
+Console.WriteLine(result);  
 
 Console.ReadLine();
