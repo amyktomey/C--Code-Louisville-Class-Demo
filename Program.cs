@@ -7,35 +7,35 @@ namespace BethanysPieShopHRM
         static void Main(string[] args)
         {
             //UsingValueParameters();
-            UsingRefParameters();
+            //UsingRefParameters();
+            UsingOutParameters();
 
             Console.ReadLine();
         }
 
         public static void UsingValueParameters();
 
-        pubiic static int CalculateYearlyWage(int monthlyWage, int numberOfMonthsWorked, int bonus);
+        public static int CalculateYearlyWage(int monthlyWage, int numberOfMonthsWorked, int bonus);
 
-        private static void UsingRefParameters()
+        private static void UsingRefParameters();
+
+        public  static int CalculateYearlyWage(int monthlyWage, int numberOfMonthsWorked, ref int bonus);
+
+        private static void UsingOutParameters()
         {
             int monthlyWage1 = 1234;
-            int monthlyWage2 = 2000;
             int months1 = 12;
-            int months2 = 8;
-            int bonus;// = 300;
+            int bonus;// notice: no initial value has been set
 
-            int yearlyWageForEmployee1ByRef = CalculateYearlyWageByRef(monthlyWage1, months1, ref bonus);
+            int yearlyWageForEmployee1ByRef = CalculateYearlyWageByRef(monthlyWage1, months1, out bonus);
             Console.WriteLine($"Yearly wage for employee 1 (Bethany):{yearlyWageForEmployee1ByRef}");
             Console.WriteLine($"Employee1 got a bonus of {bonus}");
 
-            int yearlyWageForEmployee2ByRef = CalculateYearlyWageByRef(monthlyWage2, months2, ref bonus);
-            Console.WriteLine($"Yearly wage for employee 2 (John):{yearlyWageForEmployee2ByRef}");
-            Console.WriteLine($"Employee3 got a bonus of {bonus}");
         }
-        public static int CalculateYearlyWage(int monthlyWage, int numberOfMonthsWorked, ref int bonus)
+        public static int CalculateYearlyWage(int monthlyWage, int numberOfMonthsWorked, out int bonus)
         {
-
-            if (monthlyWage < 2000)
+            bonus = new Random().Next(1000);//C# code to generate a random number smaller than 1000
+            if (bonus < 500)
             {
                 bonus *= 2;
                 Console.WriteLine("Bonus is doubled!! Yay!!");
