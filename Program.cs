@@ -55,7 +55,7 @@ namespace BethanysPieShopHRM
 
 
 
-
+// from earlier class demos same module
 //Console.WriteLine("Enter the monthly wage: ");
 //string wage = Console.ReadLine();
 
