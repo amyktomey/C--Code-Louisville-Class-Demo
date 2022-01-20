@@ -1,6 +1,60 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using System.Text;
+namespace BethanysPieShopHRM
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //UsingValueParameters();
+            UsingRefParameters();
+
+            Console.ReadLine();
+        }
+
+        public static void UsingValueParameters();
+
+        pubiic static int CalculateYearlyWage(int monthlyWage, int numberOfMonthsWorked, int bonus);
+
+        private static void UsingRefParameters()
+        {
+            int monthlyWage1 = 1234;
+            int monthlyWage2 = 2000;
+            int months1 = 12;
+            int months2 = 8;
+            int bonus;// = 300;
+
+            int yearlyWageForEmployee1ByRef = CalculateYearlyWageByRef(monthlyWage1, months1, ref bonus);
+            Console.WriteLine($"Yearly wage for employee 1 (Bethany):{yearlyWageForEmployee1ByRef}");
+            Console.WriteLine($"Employee1 got a bonus of {bonus}");
+
+            int yearlyWageForEmployee2ByRef = CalculateYearlyWageByRef(monthlyWage2, months2, ref bonus);
+            Console.WriteLine($"Yearly wage for employee 2 (John):{yearlyWageForEmployee2ByRef}");
+            Console.WriteLine($"Employee3 got a bonus of {bonus}");
+        }
+        public static int CalculateYearlyWage(int monthlyWage, int numberOfMonthsWorked, ref int bonus)
+        {
+
+            if (monthlyWage < 2000)
+            {
+                bonus *= 2;
+                Console.WriteLine("Bonus is doubled!! Yay!!");
+            }
+
+            Console.WriteLine($"The yearly wage is: {monthlyWage * numberOfMonthsWorked + bonus}");
+            return monthlyWage * numberOfMonthsWorked + bonus;
+        }
+
+    
+    }
+}
+
+
+
+
+
+
+
 
 //Console.WriteLine("Enter the monthly wage: ");
 //string wage = Console.ReadLine();
@@ -14,127 +68,127 @@ using System.Text;
 //    Console.WriteLine("Parsing failed");
 
 
-var monthlyWage = 1234;
-int months = 12, bonus = 1000;
+//var monthlyWage = 1234;
+//int months = 12, bonus = 1000;
 
-var isActive = true;
-var rating = 99.25;
+//var isActive = true;
+//var rating = 99.25;
 
-double ratePerHour = 12.34;
-int numberOfHoursWorked = 165;
+//double ratePerHour = 12.34;
+//int numberOfHoursWorked = 165;
 
-long veryLongMonth = numberOfHoursWorked;
-double d = 12345678.9;
-int x = (int)d;
+//long veryLongMonth = numberOfHoursWorked;
+//double d = 12345678.9;
+//int x = (int)d;
 
-long intVeryLongMonth = (int)veryLongMonth;
+//long intVeryLongMonth = (int)veryLongMonth;
 
-double currentMonthWage = ratePerHour * numberOfHoursWorked + bonus;
+//double currentMonthWage = ratePerHour * numberOfHoursWorked + bonus;
 
-Console.WriteLine(currentMonthWage);
+//Console.WriteLine(currentMonthWage);
 
-ratePerHour += 3; //ratePerHour = RatePerHour +3;
+//ratePerHour += 3; //ratePerHour = RatePerHour +3;
 
-if (currentMonthWage > 2000)
-{
-    Console.WriteLine("Top Paid Employee!");
-}
+//if (currentMonthWage > 2000)
+//{
+//    Console.WriteLine("Top Paid Employee!");
+//}
 
-int numberOfEmployees = 15;
-numberOfEmployees--;
+//int numberOfEmployees = 15;
+//numberOfEmployees--;
 
-int intMaxValue = int.MaxValue;
-int intMinValue = Int32.MinValue;
+//int intMaxValue = int.MaxValue;
+//int intMinValue = Int32.MinValue;
 
-char userSelection = 'a';
-char upperVersion = char.ToUpper(userSelection);
-bool isDigit = char.IsDigit(userSelection);
-bool isLetter = char.IsLetter(userSelection);
+//char userSelection = 'a';
+//char upperVersion = char.ToUpper(userSelection);
+//bool isDigit = char.IsDigit(userSelection);
+//bool isLetter = char.IsLetter(userSelection);
 
-string hireDateString = "12/12/2020";
-DateTime hireDate = DateTime.Parse(hireDateString);
-Console.WriteLine("Parsed date: " + hireDate);
+//string hireDateString = "12/12/2020";
+//DateTime hireDate = DateTime.Parse(hireDateString);
+//Console.WriteLine("Parsed date: " + hireDate);
 
-//var cultureInfo = new CultureInfo("n1-BE");// error @2:47 in module 4 Demo: Parsing strings
-//string birthDateString = "28 Maart 1984";//Dutch, spoken in Belgium
-//var birthDate = DateTime.Parse(birthDateString, cultureInfo);
-//Console.WriteLine("Birth date: " + birthDate);
-
-
-DateTime exitDate = new DateTime(2021, 12, 31);
-
-//DateTime invalidDate = new DateTime(2021, 15, 11);
-
-DateTime startDate = hireDate.AddDays(15);
-
-Console.WriteLine(startDate);
-
-DateTime currentDate = DateTime.Now;
-bool areWeInDst = currentDate.IsDaylightSavingTime();
-
-DateTime startHour = DateTime.Now;
-TimeSpan workTime = new TimeSpan(8, 35, 0);
-DateTime endHour = startHour.Add(workTime);
-
-Console.WriteLine(startHour.ToLongDateString());
-Console.WriteLine(endHour.ToShortTimeString());
+////var cultureInfo = new CultureInfo("n1-BE");// error @2:47 in module 4 Demo: Parsing strings
+////string birthDateString = "28 Maart 1984";//Dutch, spoken in Belgium
+////var birthDate = DateTime.Parse(birthDateString, cultureInfo);
+////Console.WriteLine("Birth date: " + birthDate);
 
 
+//DateTime exitDate = new DateTime(2021, 12, 31);
 
-string firstName = "Bethany";
-string lastName = "Smith";
+////DateTime invalidDate = new DateTime(2021, 15, 11);
 
-string fullName = firstName + " " + lastName;
-string employeeIdentification = string.Concat(firstName, lastName);
+//DateTime startDate = hireDate.AddDays(15);
 
-string displayName = $"Welcome! \n{firstName}\t{lastName}";
+//Console.WriteLine(startDate);
 
-Console.WriteLine(displayName);
+//DateTime currentDate = DateTime.Now;
+//bool areWeInDst = currentDate.IsDaylightSavingTime();
 
-string marketingTagLine = "Baking the \"best Pies\" ever";
+//DateTime startHour = DateTime.Now;
+//TimeSpan workTime = new TimeSpan(8, 35, 0);
+//DateTime endHour = startHour.Add(workTime);
 
-string empId = firstName.ToLower() + " " + lastName.Trim().ToLower();
-
-int length = empId.Length;
-
-if (fullName.Contains("beth") || fullName.Contains("Beth"))
-{
-    Console.WriteLine("It's Bethany!");
-}
-
-string subString = fullName.Substring(1, 3);
-Console.WriteLine("Characters 2 to 4 of fullname are " + subString);
-
-string nameUsingInterpolaiton = $"{firstName}-{lastName}";
-
-string greeting = $"Hello, {firstName.ToLower()}";
-
-Console.WriteLine(greeting);
-
-string name = "Bethany";
-string anotherName = name;
-
-Console.WriteLine("Name: " + name);
-Console.WriteLine("Another name: " + anotherName);
-
-string lowerCaseName = name.ToLower();
-
-string indexes = string.Empty;
-for (int i = 0; i < 2500; i++)
-{
-    indexes += i.ToString();
-}
+//Console.WriteLine(startHour.ToLongDateString());
+//Console.WriteLine(endHour.ToShortTimeString());
 
 
-System.Text.StringBuilder builder = new StringBuilder();
+
+//string firstName = "Bethany";
+//string lastName = "Smith";
+
+//string fullName = firstName + " " + lastName;
+//string employeeIdentification = string.Concat(firstName, lastName);
+
+//string displayName = $"Welcome! \n{firstName}\t{lastName}";
+
+//Console.WriteLine(displayName);
+
+//string marketingTagLine = "Baking the \"best Pies\" ever";
+
+//string empId = firstName.ToLower() + " " + lastName.Trim().ToLower();
+
+//int length = empId.Length;
+
+//if (fullName.Contains("beth") || fullName.Contains("Beth"))
+//{
+//    Console.WriteLine("It's Bethany!");
+//}
+
+//string subString = fullName.Substring(1, 3);
+//Console.WriteLine("Characters 2 to 4 of fullname are " + subString);
+
+//string nameUsingInterpolaiton = $"{firstName}-{lastName}";
+
+//string greeting = $"Hello, {firstName.ToLower()}";
+
+//Console.WriteLine(greeting);
+
+//string name = "Bethany";
+//string anotherName = name;
+
+//Console.WriteLine("Name: " + name);
+//Console.WriteLine("Another name: " + anotherName);
+
+//string lowerCaseName = name.ToLower();
+
+//string indexes = string.Empty;
+//for (int i = 0; i < 2500; i++)
+//{
+//    indexes += i.ToString();
+//}
 
 
-builder.Append("Last Name: ");
-builder.AppendLine(lastName);
-builder.Append("First Name: ");
-builder.Append(firstName);
-string result = builder.ToString(); 
+//System.Text.StringBuilder builder = new StringBuilder();
 
-Console.WriteLine(result);  
 
-Console.ReadLine();
+//builder.Append("Last Name: ");
+//builder.AppendLine(lastName);
+//builder.Append("First Name: ");
+//builder.Append(firstName);
+//string result = builder.ToString(); 
+
+//Console.WriteLine(result);  
+
+//Console.ReadLine();
