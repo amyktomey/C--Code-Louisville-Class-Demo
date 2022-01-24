@@ -6,59 +6,98 @@ namespace BethanysPieShopHRM
     {
         static void Main(string[] args)
         {
-            //UsingValueParameters();
+            UsingValueParameters();
             //UsingRefParameters();
             //UsingOutParameters();
 
-            int monthlyWage = 1234;
-            int months = 12;
+            //int monthlyWage = 1234;
+            //int months = 12;
+            //int bonus = 1000;
 
-            int yearlyWage = CalculateYearlyWage(monthlyWage, months);
+            //int yearlyWage = CalculateYearlyWage(monthlyWage, months, bonus);
 
-            Console.WriteLine($"Yearly wage (from main): {yearlyWage}");
+            //Console.WriteLine($"Yearly wage (from main): {yearlyWage}");
+
+
+            // double monthlyWageDouble = 1500.0;
+            // double monthsDouble = 12;
+            // double bonusDouble = 1000;
+            // double yearlyWageWithBonusDouble = CalculateYearlyWage(monthlyWageDouble, monthsDouble, bonusDouble);
 
             Console.ReadLine();
         }
 
-        //public static void UsingValueParameters();
-
-        public static int CalculateYearlyWage(int monthlyWage, int numberOfMonthsWorked);
-        {
-            //Console.WriteLine($"Yearly wage: {minthlyWage * numberOfMonthsWorked}");
-            if(numberOfMonthsWorked == 12)//let's add a bonus month
-                return monthlyWage * (numberOfMonthsWorked + 1)
-        }
-
-        //private static void UsingRefParameters();
-
-        //public  static int CalculateYearlyWage(int monthlyWage, int numberOfMonthsWorked, ref int bonus);
-
-        private static void UsingOutParameters()
+        public static void UsingValueParameters()
         {
             int monthlyWage1 = 1234;
+            int monthlyWage2 = 2000;
             int months1 = 12;
-            int bonus;// notice: no initial value has been set
+            int months2 = 8;
+            int bonus = 300;
 
-            int yearlyWageForEmployee1 = CalculateYearlyWageWithOut(monthlyWage1, months1, out bonus);
+            int yearlyWageForEmployee1 = CalculateYearlyWage(monthlyWage1, months1, bonus);
             Console.WriteLine($"Yearly wage for employee 1 (Bethany):{yearlyWageForEmployee1}");
-            Console.WriteLine($"Employee1 got a bonus of {bonus}");
+
+            int yearlyWageForEmployee2 = CalculateYearlyWage(monthlyWage2, months2, bonus);
+            Console.WriteLine($"Yearly wage for employee 2 (John):{yearlyWageForEmployee2}");
         }
-        public static int CalculateYearlyWageWithOut(int monthlyWage, int numberOfMonthsWorked, out int bonus)
+
+        //public static int CalculateYearlyWage(int monthlyWage, int numberOfMonthsWorked)
+        //{
+        //    //Console.WriteLine($"Yearly wage: {monthlyWage * numberOfMonthsWorked}");
+        //    if (numberOfMonthsWorked == 12)//let's add a bonus month
+        //        return monthlyWage * (numberOfMonthsWorked + 1);
+
+        //    return monthlyWage * numberOfMonthsWorked;
+        //}
+
+        public static int CalculateYearlyWage(int monthlyWage, int numberOfMonthsWorked, int bonus)
         {
-            bonus = new Random().Next(1000);//C# code to generate a random number smaller than 1000
-            if (bonus < 500)
-            {
+            if (monthlyWage < 2000)
                 bonus *= 2;
-                Console.WriteLine("Bonus is doubled!! Yay!!");
-            }
-
-            Console.WriteLine($"The yearly wage is: {monthlyWage * numberOfMonthsWorked + bonus}");
-            return monthlyWage * numberOfMonthsWorked + bonus;
+        
+        Console.WriteLine($"The yearly wage is: {monthlyWage * numberOfMonthsWorked + bonus}");
+        Console.WriteLine($"The employee got a bonus of {bonus}");
+        return monthlyWage * (numberOfMonthsWorked + bonus);
         }
 
-    
+        //public static double CalculateYearlyWage(double monthlyWage, double numberOfMonthsWorked, double bonus)
+        //{
+        //    Console.WriteLine($"The yearly wage is: {monthlyWage * numberOfMonthsWorked + bonus}");
+        //    return monthlyWage * (numberOfMonthsWorked + bonus);
+        //}
     }
 }
+//private static void UsingRefParameters();
+
+//public  static int CalculateYearlyWage(int monthlyWage, int numberOfMonthsWorked, ref int bonus);
+
+//private static void UsingOutParameters()
+//{
+//    int monthlyWage1 = 1234;
+//    int months1 = 12;
+//    int bonus;// notice: no initial value has been set
+//
+//    int yearlyWageForEmployee1 = CalculateYearlyWageWithOut(monthlyWage1, months1, out bonus);
+//    Console.WriteLine($"Yearly wage for employee 1 (Bethany):{yearlyWageForEmployee1}");
+//    Console.WriteLine($"Employee1 got a bonus of {bonus}");
+//}
+//public static int CalculateYearlyWageWithOut(int monthlyWage, int numberOfMonthsWorked, out int bonus)
+//        {
+//            bonus = new Random().Next(1000);//C# code to generate a random number smaller than 1000
+//            if (bonus < 500)
+//            {
+//                bonus *= 2;
+//                Console.WriteLine("Bonus is doubled!! Yay!!");
+//            }
+
+//            Console.WriteLine($"The yearly wage is: {monthlyWage * numberOfMonthsWorked + bonus}");
+//            return monthlyWage * numberOfMonthsWorked + bonus;
+//        }
+
+    
+//    }
+
 
 
 
